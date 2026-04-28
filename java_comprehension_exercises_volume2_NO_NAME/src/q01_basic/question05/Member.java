@@ -1,7 +1,7 @@
-package q01_basic.question04;
+package q01_basic.question05;
 
-class Member {
-	//TODO ここから実装する
+public class Member extends AbstMember {
+
 	private int id;
 	private String password;
 	private String name;
@@ -59,6 +59,11 @@ class Member {
 
 	public void setRank(int rank) {
 		this.rank = rank;
+	}
+
+	public void buyItem() {
+
+		System.out.println("Miura Manabu purchased the item at 50% off ");
 	}
 
 	public void showMember() {
