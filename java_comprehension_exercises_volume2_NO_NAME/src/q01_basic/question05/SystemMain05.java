@@ -9,11 +9,12 @@ public class SystemMain05 {
 
 		members[0] = new NonMember("Sato Kensuke");
 
-		members[1] = new Member(1, "PasswOrd", "Miura Manabu", 28, 2);
+		Member mb = new Member(1, "PasswOrd", "Miura Manabu", 28, 2);
+
+		members[1] = mb;
 
 		MemberManager.showAllMember(members);
 
-		Member mb = new Member();
 		mb.buyItem();
 
 		NonMember nm = new NonMember("Sato Kensuke");

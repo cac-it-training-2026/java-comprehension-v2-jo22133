@@ -1,6 +1,6 @@
 package q01_basic.question05;
 
-public class MemberManager {
+public class MemberManager extends AbstMember {
 
 	/**
 	 * 
@@ -11,9 +11,22 @@ public class MemberManager {
 	}
 
 	public static void showAllMember(AbstMember[] mem) {
-		for (AbstMember member : mem) {
-			showAllMember(member);
+		for (AbstMember m : mem) {
+			m.showMember();
 		}
+
+	}
+
+	@Override
+	public void buyItem() {
+		// TODO 自動生成されたメソッド・スタブ
+
+	}
+
+	@Override
+	public void showMember() {
+		// TODO 自動生成されたメソッド・スタブ
+
 	}
 
 }

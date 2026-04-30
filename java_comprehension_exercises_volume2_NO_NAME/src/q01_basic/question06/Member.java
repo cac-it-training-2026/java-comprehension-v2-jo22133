@@ -1,4 +1,4 @@
-package q01_basic.question05;
+package q01_basic.question06;
 
 public class Member extends AbstMember {
 
@@ -73,6 +73,7 @@ public class Member extends AbstMember {
 		System.out.println("name:" + name);
 		System.out.println("age:" + age);
 		System.out.println("rank:" + rank);
+		System.out.println("***************** ");
 
 	}
 
