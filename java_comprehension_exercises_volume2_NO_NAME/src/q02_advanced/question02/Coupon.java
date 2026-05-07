@@ -1,0 +1,64 @@
+package q02_advanced.question02;
+
+public class Coupon {
+
+	private int id;
+	private double discountRate;
+	private String description;
+
+	/**
+	 * @param id
+	 * @param discountRate
+	 * @param description
+	 */
+	public Coupon(int id, double discountRate, String description) {
+		this.id = id;
+		this.discountRate = discountRate;
+		this.description = description;
+	}
+
+	/**
+	 * 
+	 */
+	public Coupon() {
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public double getDiscountRate() {
+		return discountRate;
+	}
+
+	public void setDiscountRate(double discountRate) {
+		this.discountRate = discountRate;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	@Override
+	public String toString() {
+		return "Coupon [id=" + id + ", discountRate=" + discountRate + ", description=" + description + "]";
+	}
+
+	public static Coupon getInstance(int id, double discountRate, String description) {
+
+		Coupon co = new Coupon(id, discountRate, description);
+
+		//		Coupon co2 = new Coupon(2, 0.25, "今月の特典");
+		return co;
+
+	}
+
+}
