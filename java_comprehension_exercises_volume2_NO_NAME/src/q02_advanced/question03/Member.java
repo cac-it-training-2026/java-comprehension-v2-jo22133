@@ -1,10 +1,9 @@
-package q02_advanced.question01;
+package q02_advanced.question03;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Member extends Coupon {
-
+public class Member {
 	private int id;
 	private String password;
 	private String name;
@@ -18,7 +17,6 @@ public class Member extends Coupon {
 	 * @param name
 	 * @param age
 	 * @param rank
-	 * @param coupons
 	 */
 	public Member(int id, String password, String name, int age, int rank) {
 		this.id = id;
@@ -27,14 +25,7 @@ public class Member extends Coupon {
 		this.age = age;
 		this.rank = rank;
 
-		this.coupons = new ArrayList<Coupon>();
-
-		Coupon cp1 = new Coupon(1, 0.5, "最初の特典");
-
-		Coupon cp2 = new Coupon(2, 0.25, "今月の特典");
-
-		coupons.add(cp1);
-		coupons.add(cp2);
+		this.coupons = new ArrayList<>();
 
 	}
 
@@ -100,7 +91,26 @@ public class Member extends Coupon {
 
 	public void showMember() {
 		System.out.println(toString());
-		System.out.println("＊＊＊＊＊＊＊＊＊＊＊＊");
+
 	}
 
+	public static Member getInstance(int id, String password, String name,
+			int age, int rank) {
+
+		Member mem = new Member(id, password, name, age, rank);
+
+		Coupon c = Coupon.getInstance(1, 0.5, "最初の特典");
+
+		Coupon c2 = Coupon.getInstance(2, 0.25, "今月の特典");
+
+		List<Coupon> coupons = new ArrayList<Coupon>();
+
+		coupons.add(c);
+		coupons.add(c2);
+
+		mem.setCoupons(coupons);
+
+		return mem;
+
+	}
 }
